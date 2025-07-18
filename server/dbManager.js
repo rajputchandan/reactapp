@@ -1,9 +1,12 @@
 // server/dbManager.js
 const mongoose = require('mongoose');
+require('dotenv').config(); // make sure env variables are loaded
 const connections = {};
 
 const baseUri = process.env.MONGO_URI;
-
+if (!baseUri) {
+  throw new Error('❌ MONGO_URI is not defined in .env');
+}
 const getDatabase = async (dbName) => {
   try {
     if (connections[dbName]) {
