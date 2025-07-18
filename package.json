@@ -1,15 +1,4 @@
 {
-    "name": "dairyapp",
-    "version": "1.0.0",
-    "main": "server.js",
-    "scripts": {
-        "start": "node ./server/server.js",
-        "build": "npm install --prefix client && npm run build --prefix client",
-        "test": "echo \"Error: no test specified\" && exit 1"
-    },
-        "keywords": [],
-    "author": "",
-    "license": "ISC",
   "dependencies": {
     "bcryptjs": "^3.0.2",
     "cors": "^2.8.5",
